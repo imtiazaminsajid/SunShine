@@ -13,7 +13,7 @@ public class Common {
 
     public static String convertUnixToDate(long dt) {
         Date date = new Date(dt*1000L);
-        SimpleDateFormat simpleDateFormat = new SimpleDateFormat("HH:mm EEE MM yyyy");
+        SimpleDateFormat simpleDateFormat = new SimpleDateFormat("HH:mm aaa  |  DD EEE MM yyyy");
         String formatted = simpleDateFormat.format(date);
 
         return formatted;
@@ -22,7 +22,7 @@ public class Common {
     public static String convertUnixToHour(long sunrise) {
 
         Date date = new Date(sunrise*1000L);
-        SimpleDateFormat simpleDateFormat = new SimpleDateFormat("HH:mm");
+        SimpleDateFormat simpleDateFormat = new SimpleDateFormat("HH:mm aaa");
         String formatted = simpleDateFormat.format(date);
 
         return formatted;
