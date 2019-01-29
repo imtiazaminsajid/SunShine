@@ -1,5 +1,6 @@
 package com.example.ambit.sunshine.Retrofit;
 
+import com.example.ambit.sunshine.Model.WeatherForecastResult;
 import com.example.ambit.sunshine.Model.WeatherResult;
 import com.google.android.gms.common.data.DataBufferObserver;
 
@@ -15,4 +16,10 @@ public interface IOpenWeatherMap {
                                                  @Query("lon") String lng,
                                                  @Query("appid") String appid,
                                                  @Query("units") String unit);
+
+    @GET("forাcast")
+    Observable<WeatherForecastResult> getWeatherForecastByLatLng(@Query("lat") String lat,
+                                                                 @Query("lon") String lng,
+                                                                 @Query("appid") String appid,
+                                                                 @Query("units") String unit);
 }
